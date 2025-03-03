@@ -1,54 +1,65 @@
-# React + TypeScript + Vite
+# React Counter App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This is a simple React counter application built using TypeScript and Chakra UI. It demonstrates state management with React Context, a custom hook for accessing counter state, and toast notifications on updates.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Counter Component**: Displays and increments a counter.
+- **Global State Management**: Uses React Context and a custom hook.
+- **Toast Notification**: Shows a styled notification using Chakra UI.
+- **TypeScript**: Ensures type safety across the application.
+- **Unit Tests**: Uses React Testing Library and Jest for validation.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Setup & Installation
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Prerequisites
+
+- Node.js (>= 16.x)
+- npm or yarn
+
+### Installation
+
+```sh
+# Clone the repository
+git clone https://github.com/Advyta/Counter-App
+cd react-counter-app
+
+# Install dependencies
+npm install   # or yarn install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Running the App
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```sh
+npm run dev   # or yarn dev
 ```
+
+Then open `http://localhost:5173/` in your browser.
+
+### Running Tests
+
+```sh
+npm test   # or yarn test
+```
+
+## Usage
+
+- Click the `+1` button to increase the counter.
+- Each click triggers a toast notification displaying the updated counter value.
+
+## Technologies Used
+
+- **React** (with TypeScript)
+- **Chakra UI** (for UI components & styling)
+- **React Testing Library & Jest** (for unit testing)
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For any questions or issues, feel free to reach out!
+- [Linkedin](https://www.linkedin.com/in/advyta-jujaray/)
